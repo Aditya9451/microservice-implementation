@@ -1,11 +1,5 @@
 server:
   port: 8761
-  ssl:
-    key-store: classpath:apigatewayhttps.jks
-    key-store-password: password
-    key-store-type: pkcs12
-    key-alias: apigatewayhttps
-    key-password: password
 eureka:
   client:
     register-with-eureka: false
@@ -14,3 +8,4 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 0
   instance:
     hostname: localhost
+
