@@ -19,7 +19,7 @@ public class ApiGatewayMicroserviceApplication {
 	}
 
 
-	/*@Autowired
+	@Autowired
 	private UserRepository userRepository;
 
 	@PostConstruct
@@ -33,6 +33,6 @@ public class ApiGatewayMicroserviceApplication {
 		);
 
 		userRepository.saveAll(users);
-	}*/
+	}
 
 }
