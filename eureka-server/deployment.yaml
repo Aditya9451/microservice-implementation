@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gw-microservice
+  name: eureka-server
 spec:
   selector:
     matchLabels:
-      app: api-gw-microservice
+      app: eureka-server
   replicas: 1
   template:
     metadata:
       labels:
-        app: api-gw-microservice
+        app: eureka-server
     spec:
       containers:
-        - name: api-gw-microservice
-          image: api-gw-microservice:1.0
+        - name: eureka-server
+          image: eureka-server:1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9090

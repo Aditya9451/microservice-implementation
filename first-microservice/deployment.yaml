@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gw-microservice
+  name: first-microservice
 spec:
   selector:
     matchLabels:
-      app: api-gw-microservice
+      app: first-microservice
   replicas: 1
   template:
     metadata:
       labels:
-        app: api-gw-microservice
+        app: first-microservice
     spec:
       containers:
-        - name: api-gw-microservice
-          image: api-gw-microservice:1.0
+        - name: first-microservice
+          image: first-microservice:1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9090

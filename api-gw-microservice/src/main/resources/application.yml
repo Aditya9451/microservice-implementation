@@ -18,7 +18,7 @@ spring:
     console:
       enabled: true
   application:
-    name: api-gateway
+    name: api-gw
   cloud:
     gateway:
       routes:
