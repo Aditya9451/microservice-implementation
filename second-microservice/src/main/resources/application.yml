@@ -1,14 +1,19 @@
+eureka:
+  instance:
+    hostname: localhost
+server:
+  port: 8082
 spring:
   application:
     name: second-microservice
-server:
-  port: 8082
-  ssl:
-    key-store: classpath:apigatewayhttps.jks
-    key-store-password: password
-    key-store-type: pkcs12
-    key-alias: apigatewayhttps
-    key-password: password
-  eureka:
-    instance:
-      hostname: localhost
+  datasource:
+    driverClassName: org.h2.Driver
+    password:
+    url: "jdbc:h2:mem:test"
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect

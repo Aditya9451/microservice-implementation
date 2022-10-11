@@ -4,28 +4,28 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name ="clientDetails")
 public class ClientDetails {
 
-    public String firstName;
-    public String lastName;
-    public String gender;
-    public int age;
-    public Address address;
-    public ArrayList<PhoneNumber> phoneNumbers;
+    @Id
+    @GeneratedValue( strategy = GenerationType.AUTO )
+    private Integer clientId;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private int age;
+
+    @Embedded
+    private Address address;
+
+  /*  @Embedded
+    private ArrayList<PhoneNumber> phoneNumbers;*/
 }
 
- class Address{
-    public String streetAddress;
-    public String city;
-    public String state;
-}
 
- class PhoneNumber{
-    public String type;
-    public String number;
-}
