@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: second-microservice
+server:
+  port: 8082
+  ssl:
+    key-store: classpath:apigatewayhttps.jks
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: apigatewayhttps
+    key-password: password
+  eureka:
+    instance:
+      hostname: localhost
